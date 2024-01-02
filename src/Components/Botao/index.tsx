@@ -2,7 +2,7 @@ import React from 'react';
 import style from "./style.module.scss"
 
 
-class Botao extends React.Component{
+class Botao extends React.Component<{ texto: string}> {
 
     render() {
         /*const isTrue = true;
@@ -10,7 +10,7 @@ class Botao extends React.Component{
             backgroundRed : isTrue ? "red" : '',
         };*/
         return (
-            <button className={style.botao}>Adicionar</button>
+            <button className={style.botao}>{this.props.texto}</button>
         );
     };
 }
